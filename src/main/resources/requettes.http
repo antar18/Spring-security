@@ -1,0 +1,31 @@
+GET http://localhost:8080/api/messages
+
+
+###
+POST http://localhost:8080/api/messages
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{"texte": "couccou i'm alive "}
+
+###
+GET http://localhost:8080/api/messages/1
+Authorization: Basic fred fred
+
+###
+DELETE http://localhost:8080/api/messages/1
+Authorization: Basic admin admin
+
+
+###
+POST http://localhost:8080/api/utilisateurs
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{"login": "antar",
+"password":  "antar",
+"isAdmin": true
+}
+
+###
+GET http://localhost:8080/api/utilisateurs/admin
