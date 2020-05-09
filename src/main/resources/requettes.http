@@ -3,23 +3,23 @@ GET http://localhost:8080/api/messages
 
 ###
 POST http://localhost:8080/api/messages
-Authorization: Basic admin admin
+Authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVkIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTU4ODk4NzQzMn0.IGgGW6M1zzIbqLKmW-JFodM_fsRBiXwmr-2jyBte14Y
 Content-Type: application/json
 
 {"texte": "couccou i'm alive "}
 
 ###
 GET http://localhost:8080/api/messages/1
-Authorization: Basic fred fred
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiZXhwIjoxNTg4OTg3MjM4fQ.4w8MAGL9ItT4uLzw1w5B5V2-1L_WxuL7VHF2PRUtaD4
 
 ###
-DELETE http://localhost:8080/api/messages/1
-Authorization: Basic admin admin
+DELETE http://localhost:8080/api/messages/
+Authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiZXhwIjoxNTg4OTg3MjM4fQ.4w8MAGL9ItT4uLzw1w5B5V2-1L_WxuL7VHF2PRUtaD4
 
 
 ###
 POST http://localhost:8080/api/utilisateurs
-Authorization: Basic admin admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiZXhwIjoxNTg4OTg3NDk0fQ.Uatj45ENRKiy850WR2J0xAISWYBdz36Bf8L0kN3aBDg
 Content-Type: application/json
 
 {"login": "antar",
@@ -29,3 +29,8 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8080/api/utilisateurs/admin
+
+###
+POST http://localhost:8080/api/login?username=admin&password=admin
+
+###
